@@ -1,0 +1,27 @@
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: absolute;
+    width: 50px; 
+    height: 50px;
+    background-image: url('yellow_submarine_3_tout_petit.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transform-origin: center;
+}
+
+.clickable {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: lightblue;
+    border: 1px solid blue;
+    cursor: none;
+}

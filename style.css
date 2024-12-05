@@ -38,18 +38,22 @@
 #plankton:hover{
     background-color: green;
     opacity: 30%;
+    filter: blur(5px);
 }
 #stream:hover{
     background-color: blue;
     opacity: 30%;
+    filter: blur(5px);
 }
 #coral:hover{
     background-color: red;
     opacity: 30%;
+    filter: blur(5px);
 }
 #ice:hover{
     background-color: white;
-    opacity: 30%;
+    opacity: 40%;
+    filter: blur(5px);
 }
 #coral{
     top: -50%;

@@ -1,0 +1,30 @@
+:root {
+    --width: 16vw;
+}
+
+.number {
+    background-color: rgb(12, 211, 233);
+    margin-bottom: 7px;
+}
+
+#img {
+    width: calc(var(--width) * 3);
+    height: calc(var(--width) * 2);
+
+    background-image: url(fond_ocean.png);
+    background-size: contain;
+}
+
+.answer {
+    width: 25vw;
+    background-color: #094ACE;
+    text-align: left;
+}
+
+.answer, .answer:hover, .answer:focus {
+    color: white !important;
+}
+
+.answer:hover, .answer:focus {
+    background-color: #043598 !important;
+}

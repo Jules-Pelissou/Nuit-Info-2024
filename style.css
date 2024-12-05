@@ -63,3 +63,84 @@ footer {
         opacity: 1;
     }
 }
+:root {
+    --width: 16vw;
+}
+
+.questionBadge {
+    background-color: rgb(12, 211, 233);
+    margin-bottom: 7px;
+}
+
+#img {
+    width: calc(var(--width) * 3);
+    height: calc(var(--width) * 2);
+
+    background-image: url(fond_ocean.png);
+    background-size: contain;
+}
+
+.answer {
+    width: 25vw;
+    background-color: #094ACE;
+    text-align: left;
+}
+
+.answer, .answer:hover, .answer:focus {
+    color: white !important;
+}
+
+.answer:hover, .answer:focus {
+    background-color: #043598 !important;
+}
+#plankton{
+    top: 20%;
+    width: 40%;
+    height: 40%;
+    position: relative;
+    border-radius: 20%;
+}
+#plankton:hover{
+    background-color: green;
+    opacity: 30%;
+    filter: blur(5px);
+}
+#stream:hover{
+    background-color: blue;
+    opacity: 30%;
+    filter: blur(5px);
+}
+#coral:hover{
+    background-color: red;
+    opacity: 30%;
+    filter: blur(5px);
+}
+#ice:hover{
+    background-color: white;
+    opacity: 40%;
+    filter: blur(5px);
+}
+#coral{
+    top: -50%;
+    width: 25%;
+    height: 40%;
+    position: relative;
+    border-radius: 20%;
+}
+#stream{
+    top:10%;
+    left: 58%;
+    width: 40%;
+    height: 30%;
+    position: relative;
+    border-radius: 20%;
+}
+#ice{
+    top:-62%;
+    left: 50%;
+    width: 50%;
+    height: 40%;
+    position: relative;
+    border-radius: 20%;
+}
+

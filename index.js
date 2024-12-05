@@ -6,19 +6,31 @@ mapAnswers.set("poumons", 3);
 mapAnswers.set("peau", 2);
 
 // Question 1
-let buttons = document.querySelectorAll(".answer");
+function letsPlay()
+{
+    let buttons = document.querySelectorAll(".answer");
+    let finish = false;
+    
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            while(!finish)
+            {
+                if(button.getAttribute("data-number") == mapAnswers.get("arteres"))
+                {
+                    alert("Bien ouej mec !");
+                    localStorage.setItem("arteres", 25);
+                }
+                else
+                {
+                    alert("Game over :(");
+                    localStorage.setItem("arteres", 0);
+                }
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        if(button.getAttribute("data-number") == mapAnswers.get("arteres"))
-        {
-            alert("Bien ouej mec !");
-        }
-        else
-        {
-            alert("Game over :(");
-        }
+                finish = true;
+                console.log(localStorage.getItem("arteres"));
+            }
+        });
     });
+}
 
-    console.log(button.getAttribute("data-number"));
-});
+letsPlay();

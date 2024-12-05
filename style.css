@@ -1,3 +1,16 @@
-html {
-    cursor: url(yellow_submarine_3_tout_petit.png), auto;
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    cursor: none; /* Désactive le curseur par défaut */
+}
+.custom-cursor {
+    position: absolute;
+    width: 50px; /* Taille du sous-marin */
+    height: 50px;
+    background-image: url('yellow_submarine_3_tout_petit.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Empêche de capturer les clics sur le curseur */
+    transform-origin: center; /* Origine de la rotation */
 }

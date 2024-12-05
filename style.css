@@ -10,3 +10,20 @@ html {
 #btn:hover {
     cursor: url(images/red_submarine_tout_petit.png), auto;
 }
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.custom-cursor {
+    position: absolute;
+    width: 50px; /* Taille du sous-marin */
+    height: 50px;
+    background-image: url('yellow_submarine_tout_petit.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Empêche de capturer les clics sur le curseur */
+    transform-origin: center; /* Origine de la rotation */
+}

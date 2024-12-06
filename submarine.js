@@ -1,5 +1,11 @@
 const cursor = document.querySelector('.custom-cursor');
-
+if (!cursor) {
+    // Créer une nouvelle div
+    cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    // Ajouter l'élément au body
+    document.body.appendChild(cursor);
+}
 let lastX = 0;
 let lastY = 0;
 

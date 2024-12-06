@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Réinitialisation de la marge et du padding pour toute la page */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Conteneur qui occupe le tiers inférieur de la page */
+    .bottom-section {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%; /* Le tiers inférieur */
+      display: flex;
+      justify-content: center; /* Centrer horizontalement */
+      align-items: center; /* Centrer verticalement */
+    }
+
+    .front {
+      transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1),
+        opacity 2.5s ease-in-out; /* Transition de l'opacité */
+    }
+
+    .pushable {
+      background: hsl(340, 31%, 28%);
+      border: none;
+      border-radius: 12px;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      opacity: 0; /* Rendre le bouton invisible au départ */
+      transform: translateY(20px); /* Décaler le bouton vers le bas */
+      transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out; /* Transition pour l'apparition */
+    }
+
+    .pushable.visible {
+      opacity: 1; /* Rendre le bouton visible */
+      transform: translateY(0); /* Remettre le bouton à sa position d'origine */
+    }
+
+    .front {
+      display: block;
+      padding: 15px 100px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      background: hsl(345, 29%, 41%);
+      color: white;
+      transform: translateY(-4px);
+    }
+
+    .pushable:active .front {
+      transform: translateY(-2px);
+    }
+
+    .pushable:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    .pushable:hover .front {
+      transform: translateY(-6px);
+      transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .pushable:active .front {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+  </style>
+  <title></title> <!-- Titre supprimé -->
+</head>
+<body>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/VZerwmEefjQC4zSa/scene.splinecode"></spline-viewer>
+  <!-- Section pour centrer le bouton dans le dernier tiers de l'écran -->
+  <div class="bottom-section">
+    <a href="index.html">
+      <button class="pushable">
+        <span class="front">
+          Commencez l'expérience Biomarée
+        </span>
+      </button>
+    </a>
+  </div>
+
+  <script>
+    // Ajouter la classe 'visible' après un délai de 2.5s pour faire apparaître le bouton
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.querySelector('.pushable').classList.add('visible');
+      }, 2500); // Ajouter la classe après 2.5 secondes
+    });
+  </script>
+
+</body>
+</html>

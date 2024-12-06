@@ -1,0 +1,175 @@
+/* Réinitialisation de la marge et du padding */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  /* Police moderne */
+  background: linear-gradient(to bottom, #f0f4f8, #d9e4f5);
+  /* Dégradé doux */
+  color: #333;
+}
+
+/* Conteneur du tiers inférieur */
+.bottom-section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  /* Fond semi-transparent */
+}
+
+/* Style pour le bouton */
+.pushable {
+  background: linear-gradient(45deg, #ff758c, #ff7eb3);
+  border: none;
+  border-radius: 15px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.pushable.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.front {
+  display: block;
+  padding: 15px 120px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ffffff, #ffd1dc);
+  color: #333;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pushable:hover .front {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(255, 94, 147, 0.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+.middle-section {
+  position: absolute;
+  right: 47%;
+  top: 80%;
+}
+
+/* Style des cadres de texte */
+.left-frame,
+.right-frame {
+  position: absolute;
+  top: 15%;
+  width: 25%;
+  padding: 20px;
+  background: linear-gradient(145deg, #e3efff, #b3cfff);
+  /* Fond moderne avec dégradé */
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  height: auto;
+  overflow-y: auto;
+  animation: fadeIn 1.5s ease-in-out;
+  /* Animation douce */
+}
+
+/* Décalage des cadres */
+.left-frame {
+  left: 5%;
+}
+
+.right-frame {
+  right: 5%;
+}
+
+/* Style des titres */
+.left-frame h2,
+.right-frame h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #003366;
+}
+
+/* Style des paragraphes */
+.left-frame p,
+.right-frame p {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin: 10px 0;
+  color: #555;
+}
+.button {
+  background-color: #e74c3c;
+  /* Rouge vif */
+  color: white;
+  /* Texte blanc */
+  border: none;
+  /* Pas de bordure */
+  padding: 12px 24px;
+  /* Espacement intérieur */
+  text-align: center;
+  /* Centrer le texte */
+  text-decoration: none;
+  /* Pas de soulignement */
+  display: inline-block;
+  /* Pour un affichage en ligne */
+  font-size: 16px;
+  /* Taille de la police */
+  font-weight: bold;
+  /* Met le texte en gras */
+  border-radius: 8px;
+  /* Coins arrondis */
+  cursor: pointer;
+  /* Curseur de pointeur */
+  transition: background-color 0.3s, transform 0.2s;
+  /* Animation pour le survol */
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: #c0392b;
+  /* Rouge plus foncé au survol */
+  transform: scale(1.05);
+  /* Agrandit légèrement au survol */
+}
+
+.button:active {
+  background-color: #a93226;
+  /* Rouge encore plus foncé au clic */
+  transform: scale(0.95);
+  /* Réduit légèrement lors du clic */
+}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

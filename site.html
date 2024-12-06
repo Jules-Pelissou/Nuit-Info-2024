@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+/* Réinitialisation de la marge et du padding pour toute la page */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #2c5364, #0f2027);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Conteneur qui occupe le tiers inférieur de la page */
+.bottom-section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%; /* Le tiers inférieur */
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* Transition et style pour le bouton */
+.pushable {
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  opacity: 0; /* Rendre le bouton invisible au départ */
+  transform: translateY(20px); /* Décaler le bouton vers le bas */
+  transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out; /* Transition pour l'apparition */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pushable.visible {
+  opacity: 1; /* Rendre le bouton visible */
+  transform: translateY(0); /* Remettre le bouton à sa position d'origine */
+}
+
+.pushable .front {
+  display: block;
+  padding: 15px 100px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, #f85032, #e73827);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #e73827, #f85032);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 50ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Texte en haut */
+.top-section {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 90%;
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+  <title></title> <!-- Titre supprimé -->
+</head>
+<body>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/VZerwmEefjQC4zSa/scene.splinecode"></spline-viewer>
+  
+  <p class="top-section">Bienvenue à bord de notre aventure interactive pour la Nuit de l'Info ! 🌊🧑‍⚕️
+
+    Dans notre application web, vous incarnerez un petit sous-marin (votre curseur), prêt à explorer un océan fascinant. Votre mission ? Naviguer dans cet univers aquatique, choisir les zones sur lesquelles vous voulez être interrogé, et répondre à des questions pour découvrir leur état de santé.
+    
+    Comment ça marche ?
+    Exploration : Utilisez le sous-marin pour explorer les différentes zones de l’océan (qui correspondent différentes parties du corps humain). Chaque zone correspond à un thème précis.
+    Choix des thèmes : Une fois dans une zone, vous serez invité à répondre à des questions sur le thème sélectionné. Les réponses influenceront l’état de santé de la zone associé sur l'être humain.
+    Objectif : Faites de votre mieux pour transformer toutes les zones en vert (signe de bonne santé) et évitez qu’elles ne virent au rouge (alerte santé) ! Chaque question compte dans votre quête de l’équilibre.
+    
+    Une expérience ludique et éducative
+    Plongez dans cette expérience immersive qui mêle quiz interactif et sensibilisation à la santé humaine. Testez vos connaissances, apprenez en vous amusant, et repartez avec un bilan de vos réponses. À vous de jouer, capitaine ! 🚢✨
+    
+    Alors, prêt(e) à prendre les commandes et à plonger dans l’inconnu ? 🌊</p>
+  
+  <!-- Section pour centrer le bouton dans le dernier tiers de l'écran -->
+  <div class="bottom-section">
+    <a href="index.html">
+      <button class="pushable">
+        <span class="front">
+          Commencer l'expérience de Biomarée
+        </span>
+      </button>
+    </a>
+  </div>
+
+  <script>
+    // Ajouter la classe 'visible' après un délai de 2.5s pour faire apparaître le bouton
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.querySelector('.pushable').classList.add('visible');
+      }, 2500); // Ajouter la classe après 2.5 secondes
+    });
+  </script>
+
+</body>
+</html>

@@ -9,7 +9,6 @@ let phrase5 = "Le vent souffle à ";
 switch (result){
     case "0" :
         city_name = "Yakutsk";
-
         phrase1 = "Brrrrrrrrrrrrrrrrr, vous êtes terriblement froid, on dirait qu'on est à";
         phrase2 = "C'est glacial là-bas, il y fait actuellement ";
         getWeather(city_name, true, phrase1, phrase2, phrase3, phrase4 ,phrase5);
@@ -35,7 +34,7 @@ switch (result){
     case "100" :
         city_name = "Riyad";
         phrase1 = "Ouuuffffff il fait extrêmement chaud, c'est tes réponses qui ont fait ça ?  On dirait qu'on est à ";
-        phrase2 = "On est pas ci mal ici il fait : ";
+        phrase2 = "On crève de chaud il doit faire au moins 30 000°C. Ah non il ne fait que : ";
         getWeather(city_name, true, phrase1, phrase2, phrase3, phrase4 ,phrase5);
         break;
     default:

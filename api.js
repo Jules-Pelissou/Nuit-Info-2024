@@ -1,6 +1,10 @@
 const apikey = "30cae2a002b89550a2ec32a8a6917be8";
 let city_name = "";
-
+ document.getElementById("test").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") { 
+      getCityName();
+  }
+});
 function getCityName(){
     city_name = document.getElementById("test").value
     getWeather(city_name)

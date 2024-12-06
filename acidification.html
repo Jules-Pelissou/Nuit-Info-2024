@@ -4,131 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Réinitialisation de la marge et du padding pour toute la page */
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
-
-    /* Conteneur qui occupe le tiers inférieur de la page */
-    .bottom-section {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 40%; /* Le tiers inférieur */
-      display: flex;
-      justify-content: center; /* Centrer horizontalement */
-      align-items: center; /* Centrer verticalement */
-    }
-
-    .front {
-      transition:
-        transform 600ms cubic-bezier(.3, .7, .4, 1),
-        opacity 2.5s ease-in-out; /* Transition de l'opacité */
-    }
-
-    .pushable {
-      background: hsl(340, 31%, 28%);
-      border: none;
-      border-radius: 12px;
-      padding: 0;
-      cursor: pointer;
-      outline: none;
-      opacity: 0; /* Rendre le bouton invisible au départ */
-      transform: translateY(20px); /* Décaler le bouton vers le bas */
-      transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out; /* Transition pour l'apparition */
-    }
-
-    .pushable.visible {
-      opacity: 1; /* Rendre le bouton visible */
-      transform: translateY(0); /* Remettre le bouton à sa position d'origine */
-    }
-
-    .front {
-      display: block;
-      padding: 15px 100px;
-      border-radius: 12px;
-      font-size: 1.25rem;
-      background: hsl(345, 29%, 41%);
-      color: white;
-      transform: translateY(-4px);
-    }
-
-    .pushable:active .front {
-      transform: translateY(-2px);
-    }
-
-    .pushable:focus:not(:focus-visible) {
-      outline: none;
-    }
-
-    .pushable:hover .front {
-      transform: translateY(-6px);
-      transition:
-        transform
-        250ms
-        cubic-bezier(.3, .7, .4, 1.5);
-    }
-
-    .pushable:active .front {
-      transform: translateY(-2px);
-      transition: transform 34ms;
-    }
-
-    /* Style pour les cadres de texte */
-    .left-frame, .right-frame {
-      position: absolute;
-      top: 20%;
-      width: 22%; /* Réduit la largeur des cadres à 25% */
-      padding: 20px;
-      background-color: rgba(175, 129, 129, 0.5); /* Fond semi-transparent pour lisibilité */
-      color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-      height: 50%; /* Garde la hauteur des cadres */
-      overflow-y: auto; /* Si le texte est long, permettre de faire défiler */
-    }
-
-    /* Décaler le cadre gauche de 10% vers l'extérieur */
-    .left-frame {
-      left: -1%; /* Décalage vers l'extérieur */
-    }
-
-    /* Décaler le cadre droit de 10% vers l'extérieur */
-    .right-frame {
-      right: -1%; /* Décalage vers l'extérieur */
-    }
-
-    /* Style des titres dans les cadres */
-    .left-frame h2, .right-frame h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    /* Style des paragraphes */
-    .left-frame p, .right-frame p {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styleInfo.css">
+  
   <title></title>
 </head>
 <body>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
     <spline-viewer url="https://prod.spline.design/yiPYQgjklWF26zfc/scene.splinecode"></spline-viewer>
   <!-- Cadre gauche -->
-  <div class="left-frame">
+  <div class="left-frame" style="color: whitesmoke;">
     <h2>Cause de l'acidification</h2>
     <p>L'acidification des océans est un phénomène causé par l'absorption accrue de dioxyde de carbone (CO2) par les mers, en raison des émissions humaines. Ce processus diminue le pH de l'eau, la rendant plus acide. </p>
   </div>
 
   <!-- Cadre droit -->
-  <div class="right-frame">
+  <div class="right-frame" style="color: whitesmoke;">
     <h2>Les conséquence sur l'environnement</h2>
     <p>Cela a des conséquences graves sur les écosystèmes marins, notamment sur les coraux, les coquillages et les crustacés, qui ont du mal à former leurs coquilles et squelettes en raison de la diminution du carbonate de calcium. L'acidification perturbe également la chaîne alimentaire marine, affectant les organismes marins qui dépendent de ces espèces pour se nourrir. Elle impacte les pêches, les industries maritimes et la biodiversité marine en général. De plus, l'acidification des océans interfère avec les cycles biogéochimiques et peut réduire la capacité des océans à absorber du CO2, aggravant ainsi le réchauffement climatique.</p>
   </div>

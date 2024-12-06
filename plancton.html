@@ -26,7 +26,7 @@
 
     <div class="text-frame">
         <h1>Bienvenue dans le monde du Plancton</h1>
-        <p>Le plancton est un ensemble d'organismes microscopiques qui flottent dans l'eau, divisés en deux catégories principales : le phytoplancton, constitué de micro-algues capables de réaliser la photosynthèse, et le zooplancton, composé de petits animaux qui se nourrissent du phytoplancton ou d'autres organismes. Il joue un rôle fondamental dans l'écosystème marin.
+        <p class="explicative-text">Le plancton est un ensemble d'organismes microscopiques qui flottent dans l'eau, divisés en deux catégories principales : le phytoplancton, constitué de micro-algues capables de réaliser la photosynthèse, et le zooplancton, composé de petits animaux qui se nourrissent du phytoplancton ou d'autres organismes. Il joue un rôle fondamental dans l'écosystème marin.
 
             Le phytoplancton génère une grande quantité d'oxygène grâce à la photosynthèse, contribuant à environ 50 % de l'oxygène que l'on trouve dans l'atmosphère. En tant que base de la chaîne alimentaire marine, il est une source de nourriture pour le zooplancton, qui est ensuite consommé par des organismes marins plus grands, comme les poissons et les baleines. Cette dynamique alimentaire soutient l'ensemble de la vie marine.
             
@@ -37,7 +37,6 @@
         body {
             margin: 0;
             overflow: hidden;
-            font-family: Arial, sans-serif;
         }
 
         #background-wrap {
@@ -93,8 +92,16 @@
 
         .text-frame {
             text-align: center;
-            margin: 20px;
-            color: #fff;
+            color: #000000;
+            background-color:#C9C9C999;
+            margin: 50px;
+            padding: 10px;
+            border-radius : 25px;
+        }
+
+        .explicative-text {
+            margin : 50px;
+            line-height: 1.5;
         }
 
         h1 {

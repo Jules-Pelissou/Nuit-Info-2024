@@ -1,12 +1,11 @@
 let result = localStorage.getItem("score");
 
-let total = 0;
 
-for (let i = 0; i < result.length; i += 2) {
-    let slice = result.slice(i, i + 2);
-    total += parseInt(slice, 10);
-}
+let withoutZeros = result.replace(/^0+/, '');
+let count25 = (withoutZeros.match(/25/g) || []).length;
 
+console.log("Occurrences de '25':", count25);
+total = count25*25;
 
 let phrase1 = "";
 let phrase2 = "";

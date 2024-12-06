@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Réinitialisation de la marge et du padding pour toute la page */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Conteneur qui occupe le tiers inférieur de la page */
+    .bottom-section {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%; /* Le tiers inférieur */
+      display: flex;
+      justify-content: center; /* Centrer horizontalement */
+      align-items: center; /* Centrer verticalement */
+    }
+
+    .front {
+      transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1),
+        opacity 2.5s ease-in-out; /* Transition de l'opacité */
+    }
+
+    .pushable {
+      background: hsl(340, 31%, 28%);
+      border: none;
+      border-radius: 12px;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      opacity: 0; /* Rendre le bouton invisible au départ */
+      transform: translateY(20px); /* Décaler le bouton vers le bas */
+      transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out; /* Transition pour l'apparition */
+    }
+
+    .pushable.visible {
+      opacity: 1; /* Rendre le bouton visible */
+      transform: translateY(0); /* Remettre le bouton à sa position d'origine */
+    }
+
+    .front {
+      display: block;
+      padding: 15px 100px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      background: hsl(345, 29%, 41%);
+      color: white;
+      transform: translateY(-4px);
+    }
+
+    .pushable:active .front {
+      transform: translateY(-2px);
+    }
+
+    .pushable:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    .pushable:hover .front {
+      transform: translateY(-6px);
+      transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .pushable:active .front {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+
+    /* Style pour les cadres de texte */
+    .left-frame, .right-frame {
+      position: absolute;
+      top: 20%;
+      width: 25%; /* Réduit la largeur des cadres à 25% */
+      padding: 20px;
+      background-color: rgba(175, 129, 129, 0.5); /* Fond semi-transparent pour lisibilité */
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      height: 50%; /* Garde la hauteur des cadres */
+      overflow-y: auto; /* Si le texte est long, permettre de faire défiler */
+    }
+
+    /* Décaler le cadre gauche de 10% vers l'extérieur */
+    .left-frame {
+      left: -1%; /* Décalage vers l'extérieur */
+    }
+
+    /* Décaler le cadre droit de 10% vers l'extérieur */
+    .right-frame {
+      right: -1%; /* Décalage vers l'extérieur */
+    }
+
+    /* Style des titres dans les cadres */
+    .left-frame h2, .right-frame h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    /* Style des paragraphes */
+    .left-frame p, .right-frame p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/bWa-urTOfl3Dvagm/scene.splinecode"></spline-viewer>
+
+  <!-- Cadre gauche -->
+  <div class="left-frame">
+    <h2>Les coraux et leur rôle primordial</h2>
+    <p>Les coraux sont des éléments majeurs de l'océan. La Grande barrière de Corail par exemple, qui se situe en Australie, a un rôle primordial dans la filtration mais surtout dans l'absorption des toxines. Après absorption, les coraux sont dans la capacité d'éliminer certaines toxines ou métaux lourds. Il en est de même pour notre foie. Ils piègent les métaux lourds et autres substances afin de purifier leur environnement. Cependant, avec le changement climatique, les coraux meurent plus rapidement, l'absorption est beaucoup moins efficace.</p>
+  </div>
+
+  <!-- Cadre droit -->
+  <div class="right-frame">
+    <h2>Protéger les coraux et sensibiliser</h2>
+    <p>Interdire le tourisme dans les récifs coraliens (le tourisme mal géré est un problème, mais impliquer les touristes dans des actions responsables peut aussi être bénéfique). Les crèmes solaires biodégradables suffisent pour protéger les coraux (certes elles réduisent les dommages causés par les produits chimiques mais elles n'empêchent pas la menace principale, qui est la hausse des températures). Des campagnes de sensibilisation auprès des décideurs, du grand public et des écoliers doivent être organisées pour informer sur les dangers de la pollution plastique et encourager des comportements responsables.</p>
+  </div>
+
+</body>
+</html>

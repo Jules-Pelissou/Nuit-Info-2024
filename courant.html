@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Réinitialisation de la marge et du padding pour toute la page */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Conteneur qui occupe le tiers inférieur de la page */
+    .bottom-section {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%; /* Le tiers inférieur */
+      display: flex;
+      justify-content: center; /* Centrer horizontalement */
+      align-items: center; /* Centrer verticalement */
+    }
+
+    .front {
+      transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1),
+        opacity 2.5s ease-in-out; /* Transition de l'opacité */
+    }
+
+    .pushable {
+      background: hsl(340, 31%, 28%);
+      border: none;
+      border-radius: 12px;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      opacity: 0; /* Rendre le bouton invisible au départ */
+      transform: translateY(20px); /* Décaler le bouton vers le bas */
+      transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out; /* Transition pour l'apparition */
+    }
+
+    .pushable.visible {
+      opacity: 1; /* Rendre le bouton visible */
+      transform: translateY(0); /* Remettre le bouton à sa position d'origine */
+    }
+
+    .front {
+      display: block;
+      padding: 15px 100px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      background: hsl(345, 29%, 41%);
+      color: white;
+      transform: translateY(-4px);
+    }
+
+    .pushable:active .front {
+      transform: translateY(-2px);
+    }
+
+    .pushable:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    .pushable:hover .front {
+      transform: translateY(-6px);
+      transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .pushable:active .front {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+
+    /* Style pour les cadres de texte */
+    .left-frame, .right-frame {
+      position: absolute;
+      top: 20%;
+      width: 22%; /* Réduit la largeur des cadres à 25% */
+      padding: 20px;
+      background-color: rgba(175, 129, 129, 0.5); /* Fond semi-transparent pour lisibilité */
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      height: 48%; /* Garde la hauteur des cadres */
+      overflow-y: auto; /* Si le texte est long, permettre de faire défiler */
+    }
+
+    /* Décaler le cadre gauche de 10% vers l'extérieur */
+    .left-frame {
+      left: -1%; /* Décalage vers l'extérieur */
+    }
+
+    /* Décaler le cadre droit de 10% vers l'extérieur */
+    .right-frame {
+      right: -1%; /* Décalage vers l'extérieur */
+    }
+
+    /* Style des titres dans les cadres */
+    .left-frame h2, .right-frame h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    /* Style des paragraphes */
+    .left-frame p, .right-frame p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/uZK2XkDMaeBPaGZg/scene.splinecode"></spline-viewer>
+  <!-- Cadre gauche -->
+  <div class="left-frame">
+    <h2>Régulation de la température</h2>
+    <p>Les courants marins jouent un rôle crucial dans le climat mondial, l'écosystème marin et les activités humaines. Ils régulent la température de la Terre en transportant de l'eau chaude des régions équatoriales vers les zones plus froides, et inversement. Ce processus aide à modérer les températures globales et à équilibrer le climat terrestre. Par exemple, le Gulf Stream réchauffe les côtes nord-américaines et européennes, tandis que les courants froids comme celui de Humboldt influencent les températures sur les côtes sud-américaines.</p>
+  </div>
+
+  <!-- Cadre droit -->
+  <div class="right-frame">
+    <h2>Rôle sur les écosystèmes marinss</h2>
+    <p>Les courants marins assurent également le transport de nutriments et d'oxygène dans les océans, soutenant ainsi la vie marine. Ils facilitent la montée de l'eau profonde riche en nutriments vers la surface, ce qui favorise la croissance du phytoplancton, base de la chaîne alimentaire marine. Cela permet à une grande variété d'organismes marins de prospérer, contribuant à la biodiversité et à l'équilibre des écosystèmes marins.</p>
+  </div>
+
+</body>
+</html>

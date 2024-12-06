@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plancton</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="background-wrap">
         <div class="bubble x1"></div>
@@ -26,11 +28,24 @@
 
     <div class="text-frame">
         <h1>Bienvenue dans le monde du Plancton</h1>
-        <p class="explicative-text">Le plancton est un ensemble d'organismes microscopiques qui flottent dans l'eau, divisés en deux catégories principales : le phytoplancton, constitué de micro-algues capables de réaliser la photosynthèse, et le zooplancton, composé de petits animaux qui se nourrissent du phytoplancton ou d'autres organismes. Il joue un rôle fondamental dans l'écosystème marin.
+        <p class="explicative-text">Le plancton est un ensemble d'organismes microscopiques qui flottent dans l'eau,
+            divisés en deux catégories principales : le phytoplancton, constitué de micro-algues capables de réaliser la
+            photosynthèse, et le zooplancton, composé de petits animaux qui se nourrissent du phytoplancton ou d'autres
+            organismes. Il joue un rôle fondamental dans l'écosystème marin.
 
-            Le phytoplancton génère une grande quantité d'oxygène grâce à la photosynthèse, contribuant à environ 50 % de l'oxygène que l'on trouve dans l'atmosphère. En tant que base de la chaîne alimentaire marine, il est une source de nourriture pour le zooplancton, qui est ensuite consommé par des organismes marins plus grands, comme les poissons et les baleines. Cette dynamique alimentaire soutient l'ensemble de la vie marine.
-            
-            Le plancton est également crucial dans la régulation du climat, car le phytoplancton absorbe du dioxyde de carbone (CO2) lors de la photosynthèse. Lorsque le plancton meurt, il peut transporter le carbone vers les profondeurs marines, où il est stocké pendant des siècles, contribuant ainsi à atténuer le réchauffement climatique.</p>
+            Le phytoplancton génère une grande quantité d'oxygène grâce à la photosynthèse, contribuant à environ 50 %
+            de l'oxygène que l'on trouve dans l'atmosphère. En tant que base de la chaîne alimentaire marine, il est une
+            source de nourriture pour le zooplancton, qui est ensuite consommé par des organismes marins plus grands,
+            comme les poissons et les baleines. Cette dynamique alimentaire soutient l'ensemble de la vie marine.
+
+            Le plancton est également crucial dans la régulation du climat, car le phytoplancton absorbe du dioxyde de
+            carbone (CO2) lors de la photosynthèse. Lorsque le plancton meurt, il peut transporter le carbone vers les
+            profondeurs marines, où il est stocké pendant des siècles, contribuant ainsi à atténuer le réchauffement
+            climatique.</p>
+    </div>
+
+    <div class="middle-section">
+        <button class="button"><a href="galerie.html">Retour</a></button>
     </div>
 
     <style>
@@ -57,20 +72,86 @@
             animation: rise 20s infinite;
         }
 
-        .bubble.x1 { width: 40px; height: 40px; left: 10%; animation-delay: 0s; }
-        .bubble.x2 { width: 60px; height: 60px; left: 20%; animation-delay: 2s; }
-        .bubble.x3 { width: 30px; height: 30px; left: 30%; animation-delay: 4s; }
-        .bubble.x4 { width: 50px; height: 50px; left: 40%; animation-delay: 6s; }
-        .bubble.x5 { width: 70px; height: 70px; left: 50%; animation-delay: 8s; }
-        .bubble.x6 { width: 20px; height: 20px; left: 60%; animation-delay: 10s; }
-        .bubble.x7 { width: 80px; height: 80px; left: 70%; animation-delay: 12s; }
-        .bubble.x8 { width: 40px; height: 40px; left: 80%; animation-delay: 14s; }
-        .bubble.x9 { width: 60px; height: 60px; left: 90%; animation-delay: 16s; }
-        .bubble.x10 { width: 30px; height: 30px; left: 95%; animation-delay: 18s; }
+        .bubble.x1 {
+            width: 40px;
+            height: 40px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bubble.x2 {
+            width: 60px;
+            height: 60px;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .bubble.x3 {
+            width: 30px;
+            height: 30px;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        .bubble.x4 {
+            width: 50px;
+            height: 50px;
+            left: 40%;
+            animation-delay: 6s;
+        }
+
+        .bubble.x5 {
+            width: 70px;
+            height: 70px;
+            left: 50%;
+            animation-delay: 8s;
+        }
+
+        .bubble.x6 {
+            width: 20px;
+            height: 20px;
+            left: 60%;
+            animation-delay: 10s;
+        }
+
+        .bubble.x7 {
+            width: 80px;
+            height: 80px;
+            left: 70%;
+            animation-delay: 12s;
+        }
+
+        .bubble.x8 {
+            width: 40px;
+            height: 40px;
+            left: 80%;
+            animation-delay: 14s;
+        }
+
+        .bubble.x9 {
+            width: 60px;
+            height: 60px;
+            left: 90%;
+            animation-delay: 16s;
+        }
+
+        .bubble.x10 {
+            width: 30px;
+            height: 30px;
+            left: 95%;
+            animation-delay: 18s;
+        }
 
         @keyframes rise {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-100vh); opacity: 0; }
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
         }
 
         .frame {
@@ -93,14 +174,14 @@
         .text-frame {
             text-align: center;
             color: #000000;
-            background-color:#C9C9C999;
+            background-color: #C9C9C999;
             margin: 50px;
             padding: 10px;
-            border-radius : 25px;
+            border-radius: 25px;
         }
 
         .explicative-text {
-            margin : 50px;
+            margin: 50px;
             line-height: 1.5;
         }
 
@@ -111,6 +192,59 @@
         p {
             font-size: 16px;
         }
+
+        .middle-section {
+            position: absolute;
+            right: 47%;
+            top: 80%;
+        }
+
+        .button {
+            background-color: #e74c3c;
+            /* Rouge vif */
+            color: white;
+            /* Texte blanc */
+            border: none;
+            /* Pas de bordure */
+            padding: 12px 24px;
+            /* Espacement intérieur */
+            text-align: center;
+            /* Centrer le texte */
+            text-decoration: none;
+            /* Pas de soulignement */
+            display: inline-block;
+            /* Pour un affichage en ligne */
+            font-size: 16px;
+            /* Taille de la police */
+            font-weight: bold;
+            /* Met le texte en gras */
+            border-radius: 8px;
+            /* Coins arrondis */
+            cursor: pointer;
+            /* Curseur de pointeur */
+            transition: background-color 0.3s, transform 0.2s;
+            /* Animation pour le survol */
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+            /* Rouge plus foncé au survol */
+            transform: scale(1.05);
+            /* Agrandit légèrement au survol */
+        }
+
+        .button:active {
+            background-color: #a93226;
+            /* Rouge encore plus foncé au clic */
+            transform: scale(0.95);
+            /* Réduit légèrement lors du clic */
+        }
     </style>
 </body>
+
 </html>

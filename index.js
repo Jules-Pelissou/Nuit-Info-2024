@@ -248,6 +248,16 @@ function plaaay(event, organe, id)
         turn++;
         console.log(localStorage.getItem("score"));
     }
+    if (turn == 5) {
+        console.log("yo")
+        const buttonmeteo = document.createElement('a');
+        buttonmeteo.href = 'meteo.html';
+        buttonmeteo.classList.add('btn', 'btn-primary', 'btn-lg', 'my-2');
+        buttonmeteo.textContent = 'Voir les résultats';
+
+        // Ajout du bouton dans la page
+        document.getElementById('weatherButtonContainer').appendChild(buttonmeteo);
+    }
 }
 
 let zones = document.querySelectorAll(".zone");

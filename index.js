@@ -14,7 +14,10 @@ mapIdBonhomme.set("peau", "skin");
 
 // Explications
 let mapExplications = new Map();
-mapExplications.set("arteres", "")
+mapExplications.set("arteres", new Map());
+mapExplications.get("arteres").set("Bonne réponse", "Artères : Permet la circulation du sang dans tout le corps");
+mapExplications.get("arteres").set("Mauvaise réponse 1", "Œsophage : C’est juste un conduit");
+mapExplications.get("arteres").set("Mauvaise réponse 2", "Cerveau : Aucun lien");
 
 // Ordre questions
 let questions = ["arteres", "foie", "poumons", "peau"];
@@ -46,6 +49,8 @@ function letsPlay(organe)
 
                     let answers = document.querySelector("#answers");
                     answers.remove();
+
+                    showAnswers(organe);
                 }
                 else
                 {
@@ -64,6 +69,8 @@ function letsPlay(organe)
 
                     let answers = document.querySelector("#answers");
                     answers.remove();
+
+                    showAnswers(organe);
                 }
 
                 finish = true;
@@ -71,6 +78,21 @@ function letsPlay(organe)
             }
         });
     });
+}
+
+function showAnswers(organe)
+{
+    let info = document.querySelector("#info");
+    info.style.display = "none";
+
+    let p = document.querySelector("#main-text");
+    let goodAnswer = document.querySelector("#good-answer");
+    let badAnswer1 = document.querySelector("#bad-answer-1");
+    let badAnswer2 = document.querySelector("#bad-answer-2");
+
+    goodAnswer.innerHTML = mapExplications.get(organe).get("Bonne réponse");
+    badAnswer1.innerHTML = mapExplications.get(organe).get("Mauvaise réponse 1");
+    badAnswer2.innerHTML = mapExplications.get(organe).get("Mauvaise réponse 2");
 }
 
 letsPlay(questions[0]);

@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     overflow: hidden;
     cursor: none !important;
+    cursor: pointer !important;
 }
 
 .custom-cursor {
@@ -67,7 +68,7 @@ footer {
     --width: 16vw;
 }
 
-.questionBadge {
+#questionBadge {
     background-color: rgb(12, 211, 233);
     margin-bottom: 7px;
 }

@@ -4,14 +4,13 @@ html, body {
     height: 100%;
     overflow: hidden;
     cursor: none !important;
-    cursor: pointer !important;
 }
 
 .custom-cursor {
     position: absolute;
     width: 50px; 
     height: 50px;
-    background-image: url('yellow_submarine_tout_petit.png');
+    background-image: url('images/yellow_submarine_tout_petit.png');
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
@@ -94,6 +93,16 @@ footer {
 .answer:hover, .answer:focus {
     background-color: #043598 !important;
 }
+
+.hide {
+    display: none;
+}
+
+#answers {
+    display: flex;
+    justify-content: space-between;
+}
+
 #plankton{
     top: 20%;
     width: 40%;

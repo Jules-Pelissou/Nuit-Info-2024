@@ -13,17 +13,12 @@
     <div class="custom-cursor"></div>
     <div class="container">
         <div id="question" class="mt-3 my-4">
-            <span class="badge" id="questionBadge">Question n°1/4</span>
-            <span class="badge" id="responseBadge">Réponse</span>
+            <span class="badge hide" id="questionBadge">Question n°<span id="turn"></span>/4</span>
+            <span class="badge hide" id="responseBadge">Réponse</span>
             <p id="main-text">
                 <p id="info">
-                    Les océans sont constitués de nombreux courants marins tels que l'AMOC qui est un ensemble de courants
-                    dont le Gulf Stream et le courant du Labrador. Les courants permettent de réguler la chaleur des
-                    différents continents ainsi que l'humidité de l'air. A ce jour, l'AMOC est menacé à 95% de s'effondrer
-                    entre 2025 et 2095 dû en partie à cause du changement climatique.
-                    Si cela venait à arriver, nous ne connaîtrons plus la terre comme nous la connaissons aujourd'hui.
-                    Nous pourrions comparer ces courants marins à quelque chose que nous avons tous en nous.
-                    <span class="fw-bold">Selon vous, de quoi s'agit-il ?</span>
+                    <span id="context"></span>
+                    <span id="askedQuestion" class="fw-bold"></span>
                 </p>
                 <p id="good-answer" class="fw-bold text-success"></p>
                 <p id="bad-answer-1" class="text-danger"></p>
@@ -43,17 +38,13 @@
                 </div>
             </div> -->
         </div>
-        <div id="answers" class="d-flex justify-content-between mb-5">
-            <button class="btn mr-3 text-center clickable answer" data-number="1">Artères</button>
-            <button class="btn mr-3 text-center clickable answer" data-number="2">Œsophage</button>
-            <button class="btn text-center clickable answer" data-number="3">Cerveau</button>
-        </div>
+        <div id="answers" class="mb-5"></div>
         <div class="d-flex justify-content-around align-items-center">
             <div id="img" class="border border-info border-2 rounded-3 mb-4">
-                <div id="plankton" class="clickable"></div>
-                <div id="stream" class="clickable"></div>
-                <div id="ice" class="clickable"></div>
-                <div id="coral" class="clickable"></div>
+                <div id="plankton" class="clickable zone"></div>
+                <div id="stream" class="clickable zone"></div>
+                <div id="ice" class="clickable zone"></div>
+                <div id="coral" class="clickable zone"></div>
             </div>
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="147" height="392" viewBox="0 0 147 392" fill="none">
